@@ -1,0 +1,21 @@
+/* Add any custom styles here if needed */
+.MuiPaper-root {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .MuiPaper-root:hover {
+    transform: translateY(-5px);
+  }
+  
+  .MuiTextField-root {
+    backdrop-filter: blur(5px);
+  }
+  
+  .MuiButton-contained {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .MuiButton-contained:hover {
+    transform: scale(1.02);
+  }
