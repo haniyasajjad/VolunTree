@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.match-volunteers-container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 24px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.match-volunteers-header {
+  background-color: transparent;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.back-button {
+  color: #5D4037 !important;
+  margin-bottom: 1rem;
+}
+
+.page-title {
+  color: #5D4037;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  letter-spacing: -1px;
+}
+
+.highlight {
+  color: #4CAF50;
+}
+
+.page-subtitle {
+  color: #8D6E63;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.search-filters-section {
+  background-color: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.search-field .MuiOutlinedInput-root {
+  border-radius: 12px;
+}
+
+.search-field .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #4CAF50;
+}
+
+.search-field .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #4CAF50;
+}
+
+.search-icon {
+  color: #4CAF50;
+  margin-right: 8px;
+}
+
+.filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.filter-button {
+  border-color: #4CAF50 !important;
+  color: #4CAF50 !important;
+}
+
+.filter-button:hover {
+  background-color: rgba(76, 175, 80, 0.04) !important;
+}
+
+.send-invites-button {
+  background-color: #4CAF50 !important;
+  color: white !important;
+}
+
+.send-invites-button:hover {
+  background-color: #43A047 !important;
+}
+
+.filters-container {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.filter-field .MuiOutlinedInput-root {
+  border-radius: 12px;
+}
+
+.filter-field .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #4CAF50;
+}
+
+.filter-field .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #4CAF50;
+}
+
+.filter-label {
+  color: #5D4037;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.show-more-button {
+  color: #4CAF50 !important;
+  margin-top: 0.5rem;
+}
+
+.success-message {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.success-icon {
+  color: #4CAF50;
+}
+
+.section-title {
+  color: #5D4037;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.loading-spinner {
+  color: #4CAF50 !important;
+  margin-bottom: 1rem;
+}
+
+.no-results {
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.volunteers-grid {
+  margin-bottom: 2rem;
+}
+
+.volunteer-card {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+}
+
+.volunteer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-card.selected {
+  border: 2px solid #4CAF50;
+  background-color: rgba(76, 175, 80, 0.02);
+}
+
+.volunteer-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.volunteer-avatar {
+  background-color: #4CAF50 !important;
+  color: white !important;
+  width: 48px !important;
+  height: 48px !important;
+  font-weight: 600 !important;
+  margin-right: 1rem;
+}
+
+.volunteer-info {
+  flex-grow: 1;
+}
+
+.volunteer-name {
+  color: #5D4037;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.match-score {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.match-score-label {
+  color: #8D6E63;
+  font-size: 0.75rem;
+}
+
+.match-score-value {
+  color: #4CAF50;
+  font-weight: 700;
+}
+
+.select-checkbox {
+  color: #4CAF50 !important;
+}
+
+.volunteer-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-icon {
+  color: #03A9F4;
+  font-size: 1rem;
+}
+
+.volunteer-divider {
+  margin: 1rem 0;
+}
+
+.skills-section, .interests-section {
+  margin-bottom: 1rem;
+}
+
+.section-label {
+  color: #5D4037;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-chip {
+  background-color: rgba(3, 169, 244, 0.1) !important;
+  color: #03A9F4 !important;
+  border: none !important;
+  font-weight: 500 !important;
+}
+
+.interest-chip {
+  background-color: rgba(76, 175, 80, 0.1) !important;
+  color: #4CAF50 !important;
+  border: none !important;
+  font-weight: 500 !important;
+}
+
+.interest-chip .MuiChip-icon {
+  color: #4CAF50 !important;
+}
+
+.card-actions {
+  margin-top: auto;
+  padding: 1rem !important;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e0e0e0;
+}
+
+.view-profile-button {
+  color: #5D4037 !important;
+  border-color: #5D4037 !important;
+}
+
+.view-profile-button:hover {
+  background-color: rgba(93, 64, 55, 0.04) !important;
+}
+
+.send-invite-button {
+  background-color: #4CAF50 !important;
+  color: white !important;
+}
+
+.send-invite-button:hover {
+  background-color: #43A047 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .match-volunteers-container {
+    padding: 16px;
+  }
+  
+  .search-filters-section {
+    padding: 1rem;
+  }
+  
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .volunteer-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .filter-button, .send-invites-button {
+    width: 100%;
+  }
+} 
