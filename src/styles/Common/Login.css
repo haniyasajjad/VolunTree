@@ -1,0 +1,254 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #FEF4F2 !important; /* Fallback background for body */
+}
+
+.login-container {
+  padding: 0;
+  max-width: 100%;
+  min-height: 100vh;
+  background: #FEF4F2 !important; /* Fallback background for body */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 70px; /* Add padding to account for fixed navbar height */
+}
+
+/* Subtle noise texture like SelectRole */
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAeFBMVEUAAAD+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v4AAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAApSURBVEhL7cExAQAACMJg32H/P7nZxsAEGwAAAAAAAAAAAAAAAAAAwN8F6gAFm9K3twAAAABJRU5ErkJggg==') repeat;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #658A6E; /* Matches subtitle color for cohesion */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2; /* Ensure navbar is above other content */
+  box-sizing: border-box;
+}
+
+.navbar-brand {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #EFDED4;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-link {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #EFDED4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #F8C538; /* Matches button color for hover effect */
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 900px; /* Limit the overall width for larger screens */
+  min-height: 500px;
+}
+
+.login-image-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none; /* Matches the container background */
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.login-form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.login-paper {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none; /* Matches the container background */
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #8C6A4D; /* Matches role-card border */
+}
+
+.login-title {
+  margin-bottom: 24px;
+  color: #EFDED4; /* Matches role-title */
+  font-weight: bold;
+  font-size: 2.125rem;
+  line-height: 1.235;
+  font-family: "Special Gothic Expanded One", sans-serif; /* Matches role-title */
+}
+
+.login-subtitle {
+  margin-bottom: 24px;
+  color: #EFDED4; /* Matches role-title for consistency */
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.login-form {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.login-textfield {
+  margin-bottom: 16px !important;
+}
+
+.login-textfield .MuiInputBase-root {
+  width: 100%;
+  background-color: #fff; /* Ensure text fields are readable */
+  border-radius: 4px;
+  color: #4b5563; /* Matches role-name */
+}
+
+.login-textfield .MuiInputLabel-root {
+  color: #4b5563; /* Matches role-name */
+}
+
+/* Override Material-UI TextField focus and hover states to remove blue */
+.login-textfield .MuiOutlinedInput-root {
+  color: #4b5563; /* Matches role-name */
+}
+
+.login-textfield .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: #8C6A4D; /* Matches role-card border */
+}
+
+.login-textfield .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #F8C538; /* Matches next-button color on hover */
+}
+
+.login-textfield .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #F8C538; /* Matches next-button color on focus */
+  border-width: 2px; /* Match Material-UI default focus border width */
+}
+
+.login-textfield .MuiInputLabel-root.Mui-focused {
+  color: #F8C538; /* Matches next-button color on focus */
+}
+
+.login-butto {
+  border-radius: 9999px !important; 
+  font-weight: 500 !important; /* Bolder text */
+  font-size: 1rem !important;  /* Increased from 1.125rem */
+  background-color: #F8C538 !important; 
+  color: #EFDED4 !important; 
+  border: 2px solid #EFDED4 !important;  /* Added border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important; 
+  cursor: pointer !important;  /* Added for better UX */
+}
+
+.login-butto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: #DAB896; /* Slightly lighter on hover */
+}
+
+.login-butto.Mui-focusVisible {
+  background-color: #F8C538 !important; /* Ensure focus state matches */
+}
+
+.login-links {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.login-signup {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.login-signup-text {
+  color: #EFDED4; /* Matches role-title for consistency */
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.login-link {
+  color: #F8C538 !important; /* Matches next-button for consistency */
+  font-size: 0.875rem !important;
+  line-height: 1.43 !important;
+  text-decoration: none !important;
+}
+
+.login-link:hover {
+  text-decoration: underline !important;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .login-container {
+    padding-top: 60px; /* Adjusted for navbar */
+  }
+
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+  }
+
+  .navbar-link {
+    font-size: 0.9rem;
+  }
+
+  .login-wrapper {
+    flex-direction: column;
+  }
+
+  .login-image-section {
+    height: 200px; /* Fixed height for smaller screens */
+  }
+
+  .login-form-section {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,273 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #FEF4F2 !important;
+}
+
+.signup-container {
+  padding: 0;
+  max-width: 100%;
+  min-height: 100vh;
+  background: #FEF4F2 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 70px;
+}
+
+.signup-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAeFBMVEUAAAD+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v4AAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAApSURBVEhL7cExAQAACMJg32H/P7nZxsAEGwAAAAAAAAAAAAAAAAAAwN8F6gAFm9K3twAAAABJRU5ErkJggg==') repeat;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #FFFFFF; /* Changed to white to match DisplayEvents.css */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow to match DisplayEvents.css */
+}
+
+.navbar-brand {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #688E5F; /* Changed to match .de-navbar-brand from DisplayEvents.css */
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-link {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #6B7280; /* Changed to match .de-navbar-link from DisplayEvents.css */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #F8C538; /* Matches .de-navbar-link:hover from DisplayEvents.css */
+}
+
+.signup-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 600px;
+  align-items: flex-end;
+}
+
+.signup-image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background: none;
+}
+
+.signup-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+
+.signup-form-section {
+  flex: 1.01;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 32px;
+}
+
+.signup-paper {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #8C6A4D;
+  transition: transform 0.2s ease-in-out;
+}
+
+.signup-paper:hover {
+  transform: translateY(-5px);
+}
+
+.signup-title {
+  margin-bottom: 24px;
+  color: #EFDED4;
+  font-weight: bold;
+  font-size: 2.125rem;
+  line-height: 1.235;
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+.signup-subtitle {
+  margin-bottom: 24px;
+  color: #EFDED4;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.signup-form {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.signup-textfield {
+  margin-bottom: 16px !important;
+}
+
+.signup-textfield .MuiInputBase-root {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #4b5563;
+  backdrop-filter: blur(5px);
+}
+
+.signup-textfield .MuiInputLabel-root {
+  color: #4b5563;
+}
+
+.signup-textfield .MuiOutlinedInput-root {
+  color: #4b5563;
+}
+
+.signup-textfield .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: #8C6A4D;
+}
+
+.signup-textfield .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #F8C538;
+}
+
+.signup-textfield .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #F8C538;
+  border-width: 2px;
+}
+
+.signup-textfield .MuiInputLabel-root.Mui-focused {
+  color: #F8C538;
+}
+
+.signup-button {
+  margin-top: 24px !important;
+  margin-bottom: 16px !important;
+  border-radius: 9999px !important;
+  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  background-color: #508277 !important;
+  color: #EFDED4 !important;
+  border: 2px solid #EFDED4 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important;
+  width: 100% !important;
+  text-transform: uppercase !important;
+  box-shadow: none !important;
+}
+
+.signup-button:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+  background-color: #DAB896 !important;
+}
+
+.signup-button.Mui-focusVisible {
+  background-color: #F8C538 !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.signup-login {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.signup-login-text {
+  color: #EFDED4;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.signup-link {
+  color: #F8C538 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.43 !important;
+  text-decoration: none !important;
+}
+
+.signup-link:hover {
+  text-decoration: underline !important;
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    padding-top: 60px;
+  }
+
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+  }
+
+  .navbar-link {
+    font-size: 0.9rem;
+  }
+
+  .signup-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signup-image-section {
+    height: 500px;
+    align-items: center;
+  }
+
+  .signup-image {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .signup-form-section {
+    padding: 16px;
+    align-items: center;
+  }
+
+  .signup-button {
+    padding: 0.75rem 2rem !important;
+    font-size: 1rem !important;
+  }
+}
