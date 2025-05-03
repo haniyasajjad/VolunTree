@@ -1,0 +1,224 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto; /* Allow body to grow with content */
+  min-height: 100%; /* Ensure at least full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.de-edit-preference-wrapper {
+background-color: #F9FAFB; /* Clean White background */
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+.de-navbar {
+background-color: #FFFFFF;
+padding: 1rem 2rem;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.de-navbar-brand {
+font-size: 1.5rem;
+font-weight: bold;
+color: #688E5F; /* Forest Green */
+text-decoration: none;
+}
+
+.de-navbar-links {
+display: flex;
+gap: 1.5rem;
+}
+
+.de-navbar-link {
+font-size: 1rem;
+color: #6B7280; /* Warm Gray */
+text-decoration: none;
+}
+
+.de-navbar-link:hover {
+color: #F8C538; /* Warm Orange */
+}
+
+.de-events-container {
+padding: 20px;
+background-color: #FEF4F2;
+min-height: 100vh; /* Fill at least the viewport */
+height: auto; /* Grow with content */
+overflow-y: auto; /* Ensure container allows scrolling */
+box-sizing: border-box; /* Include padding in height calculations */
+}
+
+.de-events-filter-bar {
+display: flex;
+gap: 10px;
+margin-bottom: 20px;
+flex-wrap: wrap;
+position: sticky; /* Keep filter bar at top when scrolling */
+top: 0;
+background-color: #FEF4F2; /* Match container background */
+z-index: 1; /* Stay above cards */
+padding: 10px 0; /* Aesthetic padding */
+}
+
+.de-filter-dropdown {
+padding: 8px 12px;
+border: 1px solid #e2e8f0;
+border-radius: 4px;
+background-color: #fff;
+font-size: 14px;
+color: #4b5563;
+cursor: pointer;
+outline: none;
+}
+
+.de-filter-dropdown:focus {
+border-color: #688E5F; /* Forest Green */
+box-shadow: 0 0 0 2px rgba(104, 142, 95, 0.2);
+}
+
+.de-events-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+height: auto; /* Grow vertically with content */
+padding-bottom: 40px; /* Extra padding to prevent bottom clipping */
+}
+
+.de-event-card {
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+padding: 20px;
+display: flex;
+flex-direction: column;
+gap: 15px;
+cursor: pointer; /* Indicate clickability */
+transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effects */
+}
+
+.de-event-card:hover {
+transform: scale(1.03); /* Slight scale up on hover */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.de-event-header {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.de-event-initial {
+width: 40px;
+height: 40px;
+background-color: #BF9E8F;
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+font-size: 18px;
+font-weight: bold;
+}
+
+.de-event-details h3 {
+margin: 0;
+font-size: 16px;
+color: #1f2937;
+}
+
+.de-event-details p {
+margin: 0;
+font-size: 14px;
+color: #6b7280;
+}
+
+.de-event-date-duration {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+.de-event-date-duration .de-label {
+font-size: 12px;
+color: #6b7280;
+font-weight: 500;
+}
+
+.de-event-date-duration span:not(.de-label) {
+font-size: 14px;
+color: #1f2937;
+}
+
+.de-event-tags {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+.de-tags-label {
+font-size: 12px;
+color: #BF9E8F;
+font-weight: 500;
+}
+
+.de-event-tags .de-tag {
+display: inline-block;
+padding: 4px 8px;
+background-color: #BF9E8F;
+color: #fff;
+border-radius: 4px;
+font-size: 12px;
+margin-right: 5px;
+margin-bottom: 5px;
+}
+
+.de-event-description {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+.de-event-description .de-label {
+font-size: 12px;
+color: #6b7280;
+font-weight: 500;
+}
+
+.de-event-description p {
+margin: 0;
+font-size: 14px;
+color: #4b5563;
+line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+.de-events-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (max-width: 900px) {
+.de-events-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 600px) {
+.de-events-grid {
+  grid-template-columns: 1fr;
+}
+
+.de-events-filter-bar {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.de-filter-dropdown {
+  width: 100%;
+}
+}
