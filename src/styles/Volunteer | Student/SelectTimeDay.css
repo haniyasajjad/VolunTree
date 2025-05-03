@@ -1,0 +1,486 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.select-timeday-container {
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(145deg, #FEF4F2 0%, #EFDED4 100%) !important;
+  position: relative;
+  overflow: auto;
+  margin: 0;
+  padding: 1.5rem; /* Reduced from 2rem to match SelectInterest.css */
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.select-timeday-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAeFBMVEUAAAD+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v4AAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAApSURBVEhL7cExAQAACMJg32H/P7nZxsAEGwAAAAAAAAAAAAAAAAAAwN8F6gAFm9K3twAAAABJRU5ErkJggg==') repeat;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #FFFFFF;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #688E5F;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-link {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6B7280;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #F8C538;
+  transform: translateY(-2px);
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  min-height: calc(100vh - 100px - 1rem); /* Fit viewport minus navbar and margin-bottom */
+  padding: 1.5rem; /* Reduced from 3rem */
+  background: linear-gradient(145deg, rgba(239, 222, 212, 0.6), rgba(218, 184, 150, 0.4));
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  margin-top: 100px;
+  margin-bottom: 1rem; /* Reduced from 2rem */
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.select-timeday-title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  color: #658A6E;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.75rem; /* Reduced from 1rem */
+  text-align: center;
+}
+
+.title-underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #F8C538, #DAB896);
+  border-radius: 2px;
+  margin-bottom: 1rem; /* Reduced from 2rem */
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  color: #658A6E;
+  margin: 1rem 0; /* Reduced from 1.5rem */
+  text-align: center;
+}
+
+.time-range-section {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem; /* Reduced from 2rem */
+}
+
+.time-display {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4A3C31;
+  margin-bottom: 0.75rem; /* Reduced from 1rem */
+}
+
+.time-slider {
+  width: 100%;
+  color: #658A6E;
+}
+
+.time-slider .MuiSlider-thumb {
+  background-color: #F8C538;
+  border: 2px solid #658A6E;
+}
+
+.time-slider .MuiSlider-track {
+  background: linear-gradient(90deg, #F8C538, #DAB896);
+}
+
+.time-slider .MuiSlider-rail {
+  background-color: #EFDED4;
+}
+
+.time-slider .MuiSlider-valueLabel {
+  background-color: #658A6E;
+  color: #EFDED4;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.add-time-button {
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #F8C538, #DAB896);
+  color: #EFDED4;
+  border: 2px solid #EFDED4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 0.75rem; /* Reduced from 1rem */
+}
+
+.add-time-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(90deg, #DAB896, #F8C538);
+}
+
+.added-times {
+  width: 100%;
+  margin-top: 1rem; /* Reduced from 1.5rem */
+}
+
+.added-times-title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  color: #658A6E;
+  margin-bottom: 0.75rem; /* Reduced from 1rem */
+  text-align: center;
+}
+
+.added-time-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 245, 230, 0.8);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  border: 1px solid #8B5A2B;
+}
+
+.added-time-item span {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #4A3C31;
+}
+
+.remove-time-icon {
+  font-size: 1rem;
+  color: #A66C3A;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.remove-time-icon:hover {
+  color: #F8C538;
+}
+
+.timeday-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  justify-items: center;
+  margin-bottom: 1rem; /* Reduced from 2rem */
+}
+
+.timeday-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, rgba(255, 245, 230, 0.8), rgba(218, 184, 150, 0.5));
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border: 2px solid #8B5A2B;
+}
+
+.timeday-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, rgba(255, 245, 230, 0.9), rgba(218, 184, 150, 0.7));
+  border: 2px solid #A66C3A;
+}
+
+.timeday-icon {
+  font-size: 2.5rem;
+  color: #658A6E;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.timeday-item:hover .timeday-icon,
+.timeday-item.selected .timeday-icon {
+  color: #F8C538;
+}
+
+.timeday-label {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4A3C31;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.timeday-item.selected {
+  background: linear-gradient(145deg, rgba(248, 197, 56, 0.4), rgba(218, 184, 150, 0.6));
+  border: 2px solid #A66C3A;
+}
+
+.cta-button {
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  background: linear-gradient(90deg, #F8C538, #DAB896);
+  color: #EFDED4;
+  border: 2px solid #EFDED4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(90deg, #DAB896, #F8C538);
+}
+
+@media (max-width: 1280px) {
+  .content-box {
+    max-width: 1200px;
+    min-height: calc(100vh - 100px - 0.8rem);
+    padding: 1.2rem; /* Reduced from 1.5rem */
+    margin-bottom: 0.8rem; /* Reduced from 1rem */
+  }
+
+  .timeday-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .timeday-item {
+    width: 110px;
+    height: 110px;
+  }
+
+  .time-range-section {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content-box {
+    max-width: 900px;
+    min-height: calc(100vh - 100px - 0.8rem);
+    padding: 1rem; /* Reduced further */
+    margin-bottom: 0.8rem;
+  }
+
+  .timeday-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .timeday-item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .time-range-section {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .select-timeday-container {
+    padding: 1rem;
+  }
+
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-links {
+    gap: 1.5rem;
+  }
+
+  .navbar-link {
+    font-size: 0.9rem;
+  }
+
+  .content-box {
+    padding: 1rem; /* Reduced from 2rem */
+    margin-top: 90px;
+    margin-bottom: 0.5rem; /* Reduced from 0.8rem */
+    max-width: 95%;
+    min-height: calc(100vh - 90px - 0.5rem);
+  }
+
+  .select-timeday-title {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem; /* Reduced from 0.75rem */
+  }
+
+  .title-underline {
+    margin-bottom: 0.75rem; /* Reduced from 1rem */
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin: 0.75rem 0; /* Reduced from 1rem */
+  }
+
+  .time-range-section {
+    max-width: 100%;
+    margin-bottom: 1rem; /* Reduced from 1.5rem */
+  }
+
+  .time-display {
+    font-size: 1rem;
+    margin-bottom: 0.5rem; /* Reduced from 0.75rem */
+  }
+
+  .add-time-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    margin-top: 0.5rem; /* Reduced from 0.75rem */
+  }
+
+  .added-times {
+    margin-top: 0.75rem; /* Reduced from 1rem */
+  }
+
+  .added-times-title {
+    font-size: 1.2rem; /* Reduced from 1.4rem */
+    margin-bottom: 0.5rem; /* Reduced from 0.75rem */
+  }
+
+  .timeday-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 0.75rem; /* Reduced from 1rem */
+  }
+
+  .timeday-item {
+    width: 140px;
+    height: 140px;
+  }
+
+  .timeday-label {
+    font-size: 0.85rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-box {
+    padding: 0.8rem; /* Reduced from 1.5rem */
+    max-width: 98%;
+    min-height: calc(100vh - 90px - 0.5rem);
+  }
+
+  .select-timeday-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem; /* Reduced further */
+  }
+
+  .title-underline {
+    margin-bottom: 0.5rem; /* Reduced further */
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+    margin: 0.5rem 0; /* Reduced further */
+  }
+
+  .time-range-section {
+    margin-bottom: 0.75rem; /* Reduced further */
+  }
+
+  .added-times-title {
+    font-size: 1.2rem;
+  }
+
+  .added-time-item {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .timeday-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 0.5rem; /* Reduced further */
+  }
+
+  .timeday-item {
+    width: 160px;
+    height: 160px;
+  }
+
+  .time-slider .MuiSlider-valueLabel {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+}

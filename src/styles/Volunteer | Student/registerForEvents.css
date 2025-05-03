@@ -1,0 +1,271 @@
+.register-events-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #F9FAFB;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .register-events-form-container {
+    background-color: #BF9E8F;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .register-events-form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .register-events-title {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .register-events-subtitle {
+    color: #EFDED4;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 24px;
+    opacity: 0.9;
+    text-align: center;
+  }
+  
+  .register-events-form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .register-events-input .MuiInputBase-root {
+    background-color: #fff;
+    border-radius: 12px;
+  }
+  
+  .register-events-input .MuiOutlinedInput-notchedOutline {
+    border-color: #D1D5DB;
+  }
+  
+  .register-events-input:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #1F2937;
+  }
+  
+  .register-events-input.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #1F2937;
+    border-width: 2px;
+  }
+  
+  .register-events-button {
+    background-color: #fff !important;
+    color: #BF9E8F !important;
+    border-radius: 9999px !important;
+    padding: 12px 32px !important;
+    text-transform: none !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    margin-top: 8px !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .register-events-button:hover {
+    background-color: #BF9E8F !important;
+    color: #fff !important;
+  }
+  
+  .register-events-interests-container {
+    background-color: #F9FAFB;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .register-events-interests {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .register-events-no-interests {
+    color: #4B5563;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Event card styles from DisplayEvents.css */
+  .event-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .event-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .event-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .event-initial {
+    width: 40px;
+    height: 40px;
+    background-color: #BF9E8F;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .event-details h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #1f2937;
+  }
+  
+  .event-details p {
+    margin: 0;
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .event-date-duration {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .event-date-duration .label {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 500;
+  }
+  
+  .event-date-duration span:not(.label) {
+    font-size: 14px;
+    color: #1f2937;
+  }
+  
+  .event-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .tags-label {
+    font-size: 12px;
+    color: #BF9E8F;
+    font-weight: 500;
+  }
+  
+  .event-tags .tag {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #BF9E8F;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .event-description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .event-description .label {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 500;
+  }
+  
+  .event-description p {
+    margin: 0;
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+  }
+  
+  @media (min-width: 960px) {
+    .register-events-form-container,
+    .register-events-interests-container {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 960px) {
+    .register-events-form-container,
+    .register-events-interests-container {
+      width: 100%;
+    }
+  
+    .register-events-title {
+      font-size: 1.75rem;
+    }
+  
+    .event-card {
+      min-height: 100px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .register-events-form-container,
+    .register-events-interests-container {
+      padding: 16px 0;
+    }
+  
+    .register-events-title {
+      font-size: 1.5rem;
+    }
+  
+    .register-events-subtitle {
+      font-size: 0.875rem;
+    }
+  
+    .register-events-button {
+      padding: 10px 24px !important;
+      font-size: 0.875rem !important;
+    }
+  
+    .register-events-form,
+    .register-events-interests {
+      padding: 0 16px;
+    }
+  
+    .event-card {
+      min-height: 80px;
+    }
+  }

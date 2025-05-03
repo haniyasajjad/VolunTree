@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.select-skill-container {
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #FEF4F2 0%, #EFDED4 100%) !important;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 2rem;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.select-skill-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAeFBMVEUAAAD+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v4AAAAGYktHRAD/AP8A/6C9p5MAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAApSURBVEhL7cExAQAACMJg32H/P7nZxsAEGwAAAAAAAAAAAAAAAAAAwN8F6gAFm9K3twAAAABJRU5ErkJggg==') repeat;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #FFFFFF;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #688E5F;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-link {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6B7280;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #F8C538;
+  transform: translateY(-2px);
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2.5rem;
+  background: linear-gradient(145deg, rgba(239, 222, 212, 0.6), rgba(218, 184, 150, 0.4));
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+  margin-top: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+.select-skill-title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  color: #658A6E;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.title-underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #F8C538, #DAB896);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, rgba(255, 245, 230, 0.8), rgba(218, 184, 150, 0.5));
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border: 2px solid #8B5A2B;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, rgba(255, 245, 230, 0.9), rgba(218, 184, 150, 0.7));
+  border: 2px solid #A66C3A;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  color: #658A6E;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.skill-item:hover .skill-icon,
+.skill-item.selected .skill-icon {
+  color: #F8C538;
+}
+
+.skill-label {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4A3C31;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.skill-item.selected {
+  background: linear-gradient(145deg, rgba(248, 197, 56, 0.4), rgba(218, 184, 150, 0.6));
+  border: 2px solid #A66C3A;
+}
+
+.cta-button {
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  background: linear-gradient(90deg, #F8C538, #DAB896);
+  color: #EFDED4;
+  border: 2px solid #EFDED4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(90deg, #DAB896, #F8C538);
+}
+
+@media (max-width: 1280px) {
+  .content-box {
+    max-width: 1000px;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .skill-item {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content-box {
+    max-width: 850px;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .skill-item {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .select-skill-container {
+    padding: 1rem;
+  }
+
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-links {
+    gap: 1.5rem;
+  }
+
+  .navbar-link {
+    font-size: 0.9rem;
+  }
+
+  .content-box {
+    padding: 1.5rem;
+    margin-top: 60px;
+    max-width: 90%;
+  }
+
+  .select-skill-title {
+    font-size: 2.2rem;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-item {
+    width: 140px;
+    height: 140px;
+  }
+
+  .skill-label {
+    font-size: 0.85rem;
+  }
+
+  .cta-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-box {
+    max-width: 95%;
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-item {
+    width: 160px;
+    height: 160px;
+  }
+
+  .select-skill-title {
+    font-size: 1.8rem;
+  }
+}

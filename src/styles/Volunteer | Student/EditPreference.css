@@ -1,0 +1,235 @@
+.edit-preference-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #FEF4F2 0%, #EFDED4 100%);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-size: 1.8rem;
+  color: #688E5F;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-link {
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #6B7280;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #F8C538;
+}
+
+.edit-preference-container {
+  margin-top: 100px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit-preference-main {
+  background: linear-gradient(145deg, rgba(239, 222, 212, 0.6), rgba(218, 184, 150, 0.4));
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-heading {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  color: #658A6E;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.preference-green {
+  color: #688E5F;
+}
+
+.section-title {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  color: #658A6E;
+  margin-bottom: 1rem;
+}
+
+.preference-section {
+  margin-bottom: 2rem;
+}
+
+.chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.preference-chip {
+  background-color: rgba(255, 245, 230, 0.8);
+  color: #4A3C31;
+  border: 1px solid #8B5A2B;
+  transition: background-color 0.3s ease;
+}
+
+.preference-chip.selected {
+  background: linear-gradient(90deg, #F8C538, #DAB896);
+  color: #EFDED4;
+}
+
+.location-select .MuiOutlinedInput-root {
+  background-color: rgba(255, 245, 230, 0.8);
+  border-radius: 8px;
+}
+
+.day-label {
+  font-family: 'Arial', sans-serif;
+  color: #4A3C31;
+  margin-bottom: 0.5rem;
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.day-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 245, 230, 0.8);
+  border: 1px solid #8B5A2B;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.day-item:hover {
+  transform: scale(1.05);
+}
+
+.day-item.selected {
+  background: linear-gradient(90deg, #F8C538, #DAB896);
+  color: #EFDED4;
+}
+
+.day-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #A66C3A;
+}
+
+.day-item.selected .day-icon {
+  color: #EFDED4;
+}
+
+.availability-list {
+  margin-top: 1rem;
+}
+
+.availability-item {
+  background: rgba(255, 245, 230, 0.8);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #8B5A2B;
+}
+
+.availability-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.remove-button {
+  background: #A66C3A;
+  color: #EFDED4;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+}
+
+.remove-button:hover {
+  background: #F8C538;
+}
+
+.time-slider {
+  color: #F8C538;
+}
+
+.save-button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.save-button {
+  background: linear-gradient(90deg, #F8C538, #DAB896);
+  color: #EFDED4;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.save-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #DAB896, #F8C538);
+}
+
+@media (max-width: 768px) {
+  .edit-preference-main {
+    padding: 2rem;
+  }
+
+  .day-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .save-button {
+    padding: 0.75rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-preference-main {
+    padding: 1.5rem;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .day-item {
+    padding: 0.75rem;
+  }
+
+  .day-icon {
+    font-size: 1.2rem;
+  }
+}
