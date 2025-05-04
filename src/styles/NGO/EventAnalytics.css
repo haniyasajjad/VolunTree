@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.analytics-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.analytics-section {
+  background-color: rgba(250, 241, 230, 0.9) !important;
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 24px;
+}
+
+.analytics-title {
+  color: #2E7D32 !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 700 !important;
+  font-size: 2.5rem !important;
+  letter-spacing: -0.5px !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.analytics-subtitle {
+  color: #666 !important;
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.2px !important;
+  font-family: 'Poppins', sans-serif !important;
+  margin-bottom: 2rem !important;
+}
+
+.analytics-grid {
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 16px !important;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.metric-title {
+  color: #5D4037 !important;
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+  font-family: 'Poppins', sans-serif !important;
+  text-transform: uppercase !important;
+}
+
+.metric FIGURE {
+  color: #2E7D32 !important;
+  font-weight: 700 !important;
+  font-size: 2.2rem !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.analytics-table {
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 16px !important;
+}
+
+.table-header {
+  color: #5D4037 !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  font-family: 'Poppins', sans-serif !important;
+  background-color: rgba(233, 245, 190, 0.9) !important;
+}
+
+.table-row:hover {
+  background-color: rgba(233, 245, 190, 0.2) !important;
+}
+
+.table-cell {
+  color: #666 !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+@media (max-width: 600px) {
+  .analytics-content {
+    padding: 1rem;
+  }
+
+  .analytics-section {
+    padding: 1rem;
+  }
+
+  .analytics-title {
+    font-size: 2rem !important;
+  }
+
+  .table-header, .table-cell {
+    font-size: 0.9rem !important;
+  }
+}

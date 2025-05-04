@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.feedback-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.feedback-section {
+  background-color: rgba(250, 241, 230, 0.9) !important;
+  backdropFilter: blur(10px);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 24px;
+}
+
+.feedback-title {
+  color: #2E7D32 !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 700 !important;
+  font-size: 2.5rem !important;
+  letter-spacing: -0.5px !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.feedback-subtitle {
+  color: #666 !important;
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.2px !important;
+  font-family: 'Poppins', sans-serif !important;
+  margin-bottom: 2rem !important;
+}
+
+.feedback-form {
+  margin-top: 2rem;
+}
+
+.feedback-input .MuiOutlinedInput-root {
+  border-radius: 16px !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.feedback-input .MuiInputLabel-root {
+  color: #5D4037 !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.rating-label {
+  color: #5D4037 !important;
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+  font-family: 'Poppins', sans-serif !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.submit-button {
+  background-color: #7CB342 !important;
+  color: white !important;
+  border-radius: 16px !important;
+  padding: 12px 24px !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1rem !important;
+}
+
+.submit-button:hover {
+  background-color: #689F38 !important;
+}
+
+.submit-button:disabled {
+  background-color: #B0BEC5 !important;
+}
+
+@media (max-width: 600px) {
+  .feedback-content {
+    padding: 1rem;
+  }
+
+  .feedback-section {
+    padding: 1rem;
+  }
+
+  .feedback-title {
+    font-size: 2rem !important;
+  }
+}

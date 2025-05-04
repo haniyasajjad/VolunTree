@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.urgent-needs-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.urgent-needs-section {
+  background-color: rgba(250, 241, 230, 0.9) !important;
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 24px;
+}
+
+.urgent-needs-title {
+  color: #2E7D32 !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 700 !important;
+  font-size: 2.5rem !important;
+  letter-spacing: -0.5px !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.urgent-needs-subtitle {
+  color: #666 !important;
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 0.2px !important;
+  font-family: 'Poppins', sans-serif !important;
+  margin-bottom: 2rem !important;
+}
+
+.form-title {
+  color: #5D4037 !important;
+  font-weight: 600 !important;
+  font-size: 1.5rem !important;
+  font-family: 'Poppins', sans-serif !important;
+  margin-bottom: 1rem !important;
+}
+
+.urgent-needs-form {
+  margin-bottom: 2rem;
+}
+
+.urgent-needs-input .MuiOutlinedInput-root {
+  border-radius: 16px !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.urgent-needs-input .MuiInputLabel-root {
+  color: #5D4037 !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.submit-button {
+  background-color: #7CB342 !important;
+  color: white !important;
+  border-radius: 16px !important;
+  padding: 12px 24px !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1rem !important;
+}
+
+.submit-button:hover {
+  background-color: #689F38 !important;
+}
+
+.submit-button:disabled {
+  background-color: #B0BEC5 !important;
+}
+
+.urgent-needs-table {
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 16px !important;
+}
+
+.table-header {
+  color: #5D4037 !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  font-family: 'Poppins', sans-serif !important;
+  background-color: rgba(233, 245, 190, 0.9) !important;
+}
+
+.table-row:hover {
+  background-color: rgba(233, 245, 190, 0.2) !important;
+}
+
+.table-cell {
+  color: #666 !important;
+  font-weight: 400 !important;
+  font-size: 1rem !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.notify-button {
+  background-color: #7CB342 !important;
+  color: white !important;
+  border-radius: 16px !important;
+  padding: 8px 16px !important;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.notify-button:hover {
+  background-color: #689F38 !important;
+}
+
+.notify-button:disabled {
+  background-color: #B0BEC5 !important;
+}
+
+@media (max-width: 600px) {
+  .urgent-needs-content {
+    padding: 1rem;
+  }
+
+  .urgent-needs-section {
+    padding: 1rem;
+  }
+
+  .urgent-needs-title {
+    font-size: 2rem !important;
+  }
+
+  .table-header, .table-cell {
+    font-size: 0.9rem !important;
+  }
+}
